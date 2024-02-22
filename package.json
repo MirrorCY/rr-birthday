@@ -9,14 +9,18 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
-  "devDependencies": {},
   "peerDependencies": {
     "koishi": "^4.17.0-beta.4"
+  },
+  "devDependencies": {
+    "@mirror_cy/gpt": "^0.0.1"
+  },
+  "dependencies": {
+    "lunar-typescript": "^1.7.3"
   }
 }

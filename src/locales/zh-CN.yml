@@ -1,0 +1,75 @@
+commands:
+  rr-birthday:
+    description: 生日快乐！
+    usage: 
+
+    options:
+
+    messages:
+      askBirthday: 告诉我你的生日吧！
+      invalidDate: 没能正确解析你的生日，再输一遍试下？
+      askIfLunar: 你输入的生日是不是农历呢
+      ensureBirthday: 你的生日是 {0} 对吗？确认后我会在每年的公历生日为你庆祝哦！
+      intentJudgment: |-
+        将用户的输入进行意图判断，肯定答复返回 'true'，否定答复返回 'false'，其他返回 'null'
+
+        user: {0}
+      getBirthdayJSON: |-
+        "980224 阳历"
+        &#7B;
+            year: 1998,
+            month: 2,
+            day: 24,
+            isGregorianCalendar: true,
+        &#7D;
+
+        "971013"
+        &#7B;
+            year: 1998,
+            month: 2,
+            day: 24,
+            isGregorianCalendar: null,
+        &#7D;
+
+        "01年3月15"
+        &#7B;
+            year: 2001,
+            month: 3,
+            day: 15,
+            isGregorianCalendar: null,
+        &#7D;
+
+        "正月初七"
+        &#7B;
+            year: null,
+            month: 1,
+            day: 7,
+            isGregorianCalendar: false,
+        &#7D;
+
+        "公历2000年1月1日"
+        &#7B;
+            year: 2000,
+            month: 1,
+            day: 1,
+            isGregorianCalendar: true,
+        &#7D;
+
+        "阴历6/28"
+        &#7B;
+            year: null,
+            month: 6,
+            day: 28,
+            isGregorianCalendar: false,
+        &#7D;
+
+        "97年的"
+        &#7B;
+            year: 1997,
+            month: null,
+            day: null,
+            isGregorianCalendar: null,
+        &#7D;
+
+        Following the format above, transform the input below into JSON format and return only the JSON data, without including any other content:
+        "{0}"
